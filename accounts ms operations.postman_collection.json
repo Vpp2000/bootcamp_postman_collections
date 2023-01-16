@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "84909f2a-5893-420d-a915-e86c1234cb1f",
+		"name": "accounts ms operations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "old account types stuff",
+			"item": [
+				{
+					"name": "get all account types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/account-type",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account-type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create account type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"accountTypeCode\": 2,\r\n\t\"description\": \"ANOTHER ONE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/account-type",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account-type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete account type",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/account-type/63c0d211326481672ba9b8d7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account-type",
+								"63c0d211326481672ba9b8d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/account-type/by-account-type-code/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account-type",
+								"by-account-type-code",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update account type",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountTypeCode\": 3,\r\n    \"description\": \"EMPRESARIAL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/account-type/63c0d1b6326481672ba9b8d6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account-type",
+								"63c0d1b6326481672ba9b8d6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "accounts management",
+			"item": [
+				{
+					"name": "account creation",
+					"item": [
+						{
+							"name": "crear ahorro persona",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"clientType\": \"PERSON\",\r\n    \"accountType\": \"AHORRO\",\r\n    \"customerId\": \"P4\",\r\n    \"transactionsLimit\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8085/accounts",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "crear c_corriente empresa",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"clientType\": \"COMPANY\",\r\n    \"accountType\": \"AHORRO\",\r\n    \"customerId\": \"E1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8085/accounts",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "crear c_corriente persona",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"clientType\": \"PERSON\",\r\n    \"accountType\": \"C_CORRIENTE\",\r\n    \"customerId\": \"P4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8085/accounts",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "crear plazo fijo persona",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"clientType\": \"PERSON\",\r\n    \"accountType\": \"PLAZO_FIJO\",\r\n    \"customerId\": \"P3\",\r\n    \"operationDay\": 15\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8085/accounts",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "operations",
+					"item": [
+						{
+							"name": "deposit account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\" : 450,\r\n    \"customerId\": \"P4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8085/accounts/63c4d9d8fdb9fd4f354d883b/deposit",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"accounts",
+										"63c4d9d8fdb9fd4f354d883b",
+										"deposit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "withdraw account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\" : 450,\r\n    \"customerId\": \"E1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8085/accounts/63c466b32f44fd06ba43608b/withdraw",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"accounts",
+										"63c466b32f44fd06ba43608b",
+										"withdraw"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "find all accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/accounts",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get balance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"E1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/accounts/63c4676c2f44fd06ba43608c/balance",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"accounts",
+								"63c4676c2f44fd06ba43608c",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/accounts/63c4d61a5e8ad558f597c6ae",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"accounts",
+								"63c4d61a5e8ad558f597c6ae"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
