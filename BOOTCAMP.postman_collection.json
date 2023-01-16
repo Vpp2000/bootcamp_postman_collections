@@ -1,0 +1,621 @@
+{
+	"info": {
+		"_postman_id": "7ce55afb-82b4-4004-a166-cf3c1a4ea84a",
+		"name": "BOOTCAMP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5117096"
+	},
+	"item": [
+		{
+			"name": "Personas",
+			"item": [
+				{
+					"name": "listPerson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/clients/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"clients",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerPerson",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "consumer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "consumer",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Alan30\",\r\n    \"lastName\":\"Chumpi100\",\r\n    \"dni\":\"44444442\",\r\n    \"email\":\"Chumpi1@chumpi.com\",\r\n    \"telephone\":\"999999998\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/clients/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"clients",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePerson",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Alan5550\",\r\n    \"lastName\":\"Chumpi100000\",\r\n    \"dni\":\"44444442\",\r\n    \"email\":\"Chumpi1@chumpi.com\",\r\n    \"telephone\":\"999999998\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clients/person/update/63c1c72b918ee24071557faa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"person",
+								"update",
+								"63c1c72b918ee24071557faa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePerson",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Alan1\",\r\n    \"lastName\":\"Chumpi100000\",\r\n    \"dni\":\"44444442\",\r\n    \"email\":\"Chumpi1@chumpi.com\",\r\n    \"telephone\":\"999999998\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clients/person/delete/63c1bbaa9dd402028d72eb30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"person",
+								"delete",
+								"63c1bbaa9dd402028d72eb30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Credit",
+			"item": [
+				{
+					"name": "listCredit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/credits/credit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"credit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerCredit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":\"63c17181b820923c4e8d11d100\",\r\n    \"typeAccount\":\"CRED_PERSONAL\",\r\n    \"amountToPay\":20000,\r\n    \"amountPaid\":0,\r\n    \"creditDate\":\"2023-01-12\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/credits/credit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"credit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCredit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":\"63c17181b820923c4e8d11d1\",\r\n    \"typeAccount\":\"2\",\r\n    \"amountToPay\":10000,\r\n    \"amountPaid\":10,\r\n    \"creditDate\":\"2023-01-12\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/credits/credit/update/63c56c74635af077fd65fa54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"credit",
+								"update",
+								"63c56c74635af077fd65fa54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePay",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amountPaid\":100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/credits/credit/updatepay/63c56c74635af077fd65fa54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"credit",
+								"updatepay",
+								"63c56c74635af077fd65fa54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCredit",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Alan1\",\r\n    \"lastName\":\"Chumpi100000\",\r\n    \"dni\":\"44444442\",\r\n    \"email\":\"Chumpi1@chumpi.com\",\r\n    \"telephone\":\"999999998\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/credits/credit/delete/63c1729839c5773baca8496e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"credit",
+								"delete",
+								"63c1729839c5773baca8496e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Credit Card",
+			"item": [
+				{
+					"name": "listCreditCard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/credits/creditcard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"creditcard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerCreditCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":\"63c17181b820923c4e8d11d100\",\r\n    \"typeAccount\":\"5\",\r\n    \"amountToPay\":20000,\r\n    \"amountPaid\":20000,\r\n    \"creditDate\":\"2023-01-12\",\r\n    \"numberCard\":\"00012323506232\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/credits/creditcard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"creditcard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCreditCard",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":\"63c17181b820923c4e8d11d100\",\r\n    \"typeAccount\":\"5\",\r\n    \"amountToPay\":20000,\r\n    \"amountPaid\":20000,\r\n    \"creditDate\":\"2023-01-12\",\r\n    \"numberCard\":\"00012323506232\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/credits/creditcard/update/63c5796812e9d0513db2c220",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"creditcard",
+								"update",
+								"63c5796812e9d0513db2c220"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Pago",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amountPaid\":200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/credits/creditcard/updatecardpay/63c5796812e9d0513db2c220",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"creditcard",
+								"updatecardpay",
+								"63c5796812e9d0513db2c220"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update condumo de T.credito",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amountPaid\":350\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/credits/creditcard/updatecardCons/63c5796812e9d0513db2c220",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"creditcard",
+								"updatecardCons",
+								"63c5796812e9d0513db2c220"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCredit",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Alan1\",\r\n    \"lastName\":\"Chumpi100000\",\r\n    \"dni\":\"44444442\",\r\n    \"email\":\"Chumpi1@chumpi.com\",\r\n    \"telephone\":\"999999998\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/credits/creditcard/delete/63c1729839c5773baca8496e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"creditcard",
+								"delete",
+								"63c1729839c5773baca8496e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empresas",
+			"item": [
+				{
+					"name": "listCompany",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/clients/company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerCompany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"businessName\":\"EMPRESA02 SAC\",\r\n    \"ruc\":\"20044444446\",\r\n    \"email\":\"empresa02@chumpi.com\",\r\n    \"telephone\":\"999999996\",\r\n    \"holders\":[\r\n        {\r\n            \"dni\":\"12345678\",\r\n            \"name\":\"nombre03\",\r\n            \"lastName\":\"apellido03\"\r\n        },\r\n        {\r\n            \"dni\":\"12345600\",\r\n            \"name\":\"nombre04\",\r\n            \"lastName\":\"apellido04\"\r\n        }\r\n    ],\r\n    \"signer\":[\r\n        {\r\n            \"dni\":\"12347859\",\r\n            \"name\":\"nombre02\",\r\n            \"lastname\":\"apellido02\"\r\n        }\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clients/company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCompany",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"businessName\":\"EMPRESA SloñlñlAC\",\r\n    \"ruc\":\"20044444442\",\r\n    \"email\":\"empresa@chumpi.com\",\r\n    \"telephone\":\"999999998\",\r\n    \"holders\":[\r\n        {\r\n            \"dni\":\"12345678\",\r\n            \"name\":\"nombre000001\",\r\n            \"lastname\":\"apellido01\"\r\n        }\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clients/company/update/63c1c9fcb757a051443106ed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"company",
+								"update",
+								"63c1c9fcb757a051443106ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCompany",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Alan1\",\r\n    \"lastName\":\"Chumpi100000\",\r\n    \"dni\":\"44444442\",\r\n    \"email\":\"Chumpi1@chumpi.com\",\r\n    \"telephone\":\"999999998\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clients/company/delete/63c1c9fcb757a051443106ed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"company",
+								"delete",
+								"63c1c9fcb757a051443106ed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "configserver",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "consumer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "consumer",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/clients/default",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"clients",
+								"default"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
